@@ -14,6 +14,8 @@
 		21975FF41BA7B946000A2928 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21975FF31BA7B946000A2928 /* Images.xcassets */; };
 		21975FF71BA7B946000A2928 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21975FF51BA7B946000A2928 /* LaunchScreen.xib */; };
 		219760031BA7B946000A2928 /* CIDemo01Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 219760021BA7B946000A2928 /* CIDemo01Tests.m */; };
+		2197600E1BA7B9AC000A2928 /* Kiwi.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2197600D1BA7B9AC000A2928 /* Kiwi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		219760101BA7B9C5000A2928 /* SampleSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 2197600F1BA7B9C5000A2928 /* SampleSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +27,19 @@
 			remoteInfo = CIDemo01;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2197600C1BA7B988000A2928 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2197600E1BA7B9AC000A2928 /* Kiwi.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		21975FE31BA7B946000A2928 /* CIDemo01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CIDemo01.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +55,8 @@
 		21975FFC1BA7B946000A2928 /* CIDemo01Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CIDemo01Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		219760011BA7B946000A2928 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		219760021BA7B946000A2928 /* CIDemo01Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIDemo01Tests.m; sourceTree = "<group>"; };
+		2197600D1BA7B9AC000A2928 /* Kiwi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kiwi.framework; path = CIDemo01Tests/Kiwi.framework; sourceTree = "<group>"; };
+		2197600F1BA7B9C5000A2928 /* SampleSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +80,7 @@
 		21975FDA1BA7B946000A2928 = {
 			isa = PBXGroup;
 			children = (
+				2197600D1BA7B9AC000A2928 /* Kiwi.framework */,
 				21975FE51BA7B946000A2928 /* CIDemo01 */,
 				21975FFF1BA7B946000A2928 /* CIDemo01Tests */,
 				21975FE41BA7B946000A2928 /* Products */,
@@ -107,6 +125,7 @@
 			children = (
 				219760021BA7B946000A2928 /* CIDemo01Tests.m */,
 				219760001BA7B946000A2928 /* Supporting Files */,
+				2197600F1BA7B9C5000A2928 /* SampleSpec.m */,
 			);
 			path = CIDemo01Tests;
 			sourceTree = "<group>";
@@ -146,6 +165,7 @@
 				21975FF81BA7B946000A2928 /* Sources */,
 				21975FF91BA7B946000A2928 /* Frameworks */,
 				21975FFA1BA7B946000A2928 /* Resources */,
+				2197600C1BA7B988000A2928 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -229,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				219760101BA7B9C5000A2928 /* SampleSpec.m in Sources */,
 				219760031BA7B946000A2928 /* CIDemo01Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,6 +391,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/CIDemo01Tests",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -389,6 +411,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/CIDemo01Tests",
 				);
 				INFOPLIST_FILE = CIDemo01Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
